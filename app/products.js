@@ -21,6 +21,13 @@ app.directive("condition", function() {
   };
 });
 
+// app.directive("calendar", function() {
+//   return {
+//     restrict: "E",
+//     templateUrl: "calendar.html"
+//   };
+// });
+
 app.directive("productTabs", function() {
   return {
     restrict: "E",

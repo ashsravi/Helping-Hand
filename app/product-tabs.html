@@ -10,11 +10,16 @@
     <li ng-class="{ active:tab.isSet(3) }">
       <a href="" ng-click="tab.setTab(3)">Comments</a>
     </li>
+    <!-- <li ng-class="{ active:tab.isSet(4) }">
+      <a href="" ng-click="tab.setTab(4)">Comments</a>
+    </li> -->
   </ul>
   <!--  Description Tab's Content  -->
   <descriptions ng-show="tab.isSet(1)"></descriptions>
   <!--  Spec Tab's Content  -->
   <condition ng-show="tab.isSet(2)"></condition>
-  <!--  comment Tab's Content  -->
+  <!--  Comment Tab's Content  -->
   <comments ng-show="tab.isSet(3)"></comments>
+  <!--  Calendar Tab's Content  -->
+<!--   <calendar ng-show="tab.isSet(4)"></calendar> -->
 </section>

@@ -6,13 +6,16 @@
   "contributors": [
     "Ashwin Ravi"
   ],
-
   "repository": {
     "type": "git",
     "url": "http://github.com/ashsravi/Helping-Hand.git"
   },
-
   "dependencies": {
+    "angular": "^1.5.3",
+    "angular-animate": "^1.5.3",
+    "angular-aria": "^1.5.3",
+    "angular-material": "^1.0.7",
+    "angular-messages": "^1.5.3",
     "body-parser": "^1.4.3",
     "express": "^4.4.5",
     "mongoose": "^4.1.0",
@@ -20,5 +23,4 @@
     "q": "^1.4.1",
     "request": "^2.36.0"
   }
-
 }

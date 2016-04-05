@@ -1,5 +1,5 @@
 (function() {
-  var app = angular.module('Store', ['store-directives']);
+  var app = angular.module('Store', ['store-directives']); // determine how to add calendar
 
   app.controller('GalleryController', function() {
     this.imageIndex = 0;
@@ -38,7 +38,6 @@
     ];
   
   });
-
 
   var listings = [{
     name: 'Pool Speakers',
