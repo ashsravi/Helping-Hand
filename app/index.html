@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <title>AngularJS</title>
+    <title>Helping Hand MVPv </title>
     <link data-require="bootstrap-css" data-semver="3.1.1" rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
     <link data-require="semantic-ui@*" data-semver="0.9.6" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.9.6/css/semantic.min.css" />
     <script data-require="jquery@*" data-semver="2.0.3" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
@@ -24,22 +24,21 @@
     <!--  Products Container  -->
     <div class="list-group">
       <!--  Product Container  -->
-      <div class="list-group-item" ng-repeat="product in store.products | orderBy:'-price'">
+      <div class="list-group-item" ng-repeat="product in store.products">
 
-        <!-- $index Practice:  -->
-        <h3>Item #{{$index + 1}}: {{product.name | uppercase}}<em class="pull-right">{{product.price | currency}}</em>
-        </h3>
+        <h3>Item #{{$index + 1}}: {{product.name | uppercase}}</h3>
 
         <!-- Image Gallery  -->
         <div ng-show="product.images.length" ng-controller="GalleryController as gallery">
           <div class="img-wrap">
             <img ng-src="{{product.images[gallery.imageIndex]}}" class="img-thumbnail center-block" />
           </div>
-          <ul class="img-thumbnails clearfix">
+          <!-- Thumbnails  -->
+         <!--  <ul class="img-thumbnails clearfix">
             <li class="small-image pull-left thumbnail" ng-repeat="image in product.images" ng-click="gallery.currentImageChange($index)">
               <img ng-src="{{image}}" />
             </li>
-          </ul>
+          </ul> -->
         </div>
 
         <!-- Product Tabs  -->

@@ -1,0 +1,53 @@
+var Q = require('q');
+var Products = require('./products-schema.js');
+
+// Promisify a few mongoose methods with the `q` promise library
+var findProducts = Q.nbind(Products.findOne, Products);
+var createProducts = Q.nbind(Products.create, Products);
+var findAllProducts = Q.nbind(Products.find, Products);
+
+module.exports = {
+// GET requests
+  allProducts: function (req, res, next) {
+    findAllProducts({})
+      .then(function (products) {
+        console.log('products to send in res', products );
+        res.json(products);
+      })
+      .fail(function (error) {
+        next(error);
+      });
+  },
+// POST requests
+  newComment: function (req, res, next) {
+    // perhaps comment??
+    var url = req.body.url;
+    // do you need this step to check if there's a match??
+    findProducts({})
+      .then(function (match) {
+        if (match) {
+          res.send(match);
+        } 
+      })
+      .then(function (comment) {
+        if (comment) {
+          var newComment = {
+            // what info can you add in here??
+            name: name,
+            description: 0,
+            title: title
+          };
+          return createProducts(newComment);
+        }
+      })
+      .then(function (createdProducts) {
+        if (createdProducts) {
+          res.json(createdProducts);
+        }
+      })
+      .fail(function (error) {
+        next(error);
+      });
+  }
+
+};
