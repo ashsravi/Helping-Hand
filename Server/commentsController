@@ -1,0 +1,49 @@
+var Q = require('q');
+var Products = require('./products-schema.js');
+
+// Promisify a few mongoose methods with the `q` promise library
+// Add a function for updating comments
+var findProducts = Q.nbind(Products.findOne, Products);
+var createProducts = Q.nbind(Products.create, Products);
+var findAllProducts = Q.nbind(Products.find, Products);
+
+module.exports = {
+// // GET requests
+//   allProducts: function (req, res, next) {
+//     findAllProducts({comments: })
+//       .then(function (comments) {
+//         console.log('comments to send in res', comments );
+//         res.json(comments);
+//       })
+//       .fail(function (error) {
+//         next(error);
+//       });
+//   },
+
+// POST requests
+  newComment: function (req, res, next) {
+    // perhaps comment??
+    var comments = req.body.comments;
+    // do you need this step to check if there's a match??
+    findProducts({comments: comments})
+      .then(function (comment) {
+        if (comment) {
+          var newComment = {
+            body: comments.body,
+            author: comments.author
+            // createdOn is auto-generated
+          };
+          return createProducts(newComment);
+        }
+      })
+      .then(function (createdProducts) {
+        if (createdProducts) {
+          res.json(createdProducts);
+        }
+      })
+      .fail(function (error) {
+        next(error);
+      });
+  }
+
+};

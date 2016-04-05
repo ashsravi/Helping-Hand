@@ -1,8 +1,18 @@
-<div>
+<!-- <div>
   <h4>Condition</h4>
   <ul class="list-unstyled">
     <li>
       <strong>Condition</strong>
       : {{product.condition}}</li>
   </ul>
+</div> -->
+
+<div>
+  <h4>Condition</h4>
+    <div data-ng-controller="ConditionController as condition">
+        <strong>Select a condition:</strong>
+        <select ng-model="condition.condition"
+                data-ng-options="opts.type for opts in condition.opts">                
+        </select>
+    </div>
 </div>

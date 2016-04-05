@@ -1,9 +1,10 @@
-var ProductsController = require('./productsController.js');
+var productsController = require('./productsController.js');
+var commentsController = require('./commentsController.js');
 var express = require('express');
 
 module.exports = function (app, express) {
-  app.get('/*', ProductsController.allProducts);
-  app.post('/api/*', ProductsController.newLink);
+  app.get('/*', productsController.allProducts);
+  app.post('/api/*', commentsController.newComment);
 
   // If a request is sent somewhere other than the routes above,
   // send it through our custom error handler
