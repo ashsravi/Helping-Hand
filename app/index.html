@@ -18,7 +18,7 @@
     <!--  Store Header  -->
     <header>
       <h1 class="text-center">Helping Hand</h1>
-      <h2 class="text-center">– List your stuff! –</h2>
+      <h2 class="text-center"> List your stuff! </h2>
     </header>
 
     <!--  Products Container  -->
@@ -27,7 +27,7 @@
       <div class="list-group-item" ng-repeat="product in store.products | orderBy:'-price'">
 
         <!-- $index Practice:  -->
-        <h3>Gem #{{$index + 1}}: {{product.name | uppercase}}<em class="pull-right">{{product.price | currency}}</em>
+        <h3>Item #{{$index + 1}}: {{product.name | uppercase}}<em class="pull-right">{{product.price | currency}}</em>
         </h3>
 
         <!-- Image Gallery  -->

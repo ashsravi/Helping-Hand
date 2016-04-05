@@ -7,17 +7,17 @@ app.directive("descriptions", function() {
   };
 });
 
-app.directive("reviews", function() {
+app.directive("comments", function() {
   return {
     restrict: "E",
-    templateUrl: "reviews.html"
+    templateUrl: "comments.html"
   };
 });
 
-app.directive("specs", function() {
+app.directive("condition", function() {
   return {
     restrict: "E",
-    templateUrl: "specs.html"
+    templateUrl: "condition.html"
   };
 });
 

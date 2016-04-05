@@ -14,14 +14,14 @@
   });
 
 
-  app.controller("ReviewController", function(){
+  app.controller("CommentController", function(){
 
-    this.review = {};
+    this.comment = {};
 
-    this.addReview = function(product){
-      this.review.createdOn = Date.now();
-      product.reviews.push(this.review);
-      this.review = {};
+    this.addComment = function(product){
+      this.comment.createdOn = Date.now();
+      product.comments.push(this.comment);
+      this.comment = {};
     };
 
   });
@@ -39,7 +39,7 @@
       "img/gem-05.gif",
       "img/gem-09.gif"
     ],
-    reviews: [{
+    comments: [{
       stars: 5,
       body: "I love this gem!",
       author: "joe@thomas.com",
@@ -63,7 +63,7 @@
       "img/gem-03.gif",
       "img/gem-04.gif",
     ],
-    reviews: [{
+    comments: [{
       stars: 3,
       body: "I think this gem was just OK, could honestly use more shine, IMO.",
       author: "JimmyDean@sausage.com",
@@ -87,7 +87,7 @@
       "img/gem-07.gif",
       "img/gem-10.gif"
     ],
-    reviews: [{
+    comments: [{
       stars: 1,
       body: "This gem is WAY too expensive for its rarity value.",
       author: "turtleguyy@zdn.me",
