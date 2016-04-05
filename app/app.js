@@ -40,12 +40,10 @@
       "img/gem-09.gif"
     ],
     comments: [{
-      stars: 5,
       body: "I love this gem!",
       author: "joe@thomas.com",
       createdOn: 1397490980837
     }, {
-      stars: 1,
       body: "This gem sucks.",
       author: "tim@hater.com",
       createdOn: 1397490980837
@@ -64,12 +62,10 @@
       "img/gem-04.gif",
     ],
     comments: [{
-      stars: 3,
       body: "I think this gem was just OK, could honestly use more shine, IMO.",
       author: "JimmyDean@sausage.com",
       createdOn: 1397490980837
     }, {
-      stars: 4,
       body: "Any gem with 12 faces is for me!",
       author: "gemsRock@alyssaNicoll.com",
       createdOn: 1397490980837
@@ -88,17 +84,14 @@
       "img/gem-10.gif"
     ],
     comments: [{
-      stars: 1,
       body: "This gem is WAY too expensive for its rarity value.",
       author: "turtleguyy@zdn.me",
       createdOn: 1397490980837
     }, {
-      stars: 1,
       body: "BBW: High Shine != High Quality.",
       author: "LouisW407@gmail.com",
       createdOn: 1397490980837
     }, {
-      stars: 1,
       body: "Don't waste your rubles!",
       author: "nat@flatland.com",
       createdOn: 1397490980837
